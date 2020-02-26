@@ -1,0 +1,11 @@
+baseurl: ""
+url: ""
+menu:
+  - url: '/services.html'
+    title: Leistungen
+  - url: '/customers.html'
+    title: Referenzen
+  - url: '/jobs.html'
+    title: Jobs
+  - url: '/contact.html'
+    title: Kontakt
