@@ -2,14 +2,14 @@
 <html lang="de-CH">
 <head>
   <meta charset="utf8">
-  <title>{{ page.title }} | JC Development AG</title>
+  <title>{{ page.meta_title | default: page.title }} | JC Development AG</title>
   <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
   <meta name="description" content="">
-  <script src="{{ site.url }}/assets/js/turbolinks.js"></script>
+  <script src="{{ site.url }}/assets/js/turbolinks.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <a href="{{ site.url }}">
+    <a href="{{ site.url }}" class="muted-link">
       <img src="{{ site.url }}/assets/img/logo.svg" alt="JC Development" width="200">
     </a>
   </header>

@@ -1,8 +1,30 @@
 ---
 ---
 
+@import url("//hello.myfonts.net/count/3b1adf")
+
+
+@font-face
+  font-family: 'NHaasGroteskDSPro-55Rg'
+  src: url('../fonts/3B1ADF_0_0.eot')
+  src: url('../fonts/3B1ADF_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3B1ADF_0_0.woff2') format('woff2'),url('../fonts/3B1ADF_0_0.woff') format('woff'),url('../fonts/3B1ADF_0_0.ttf') format('truetype')
+
+
+@font-face
+  font-family: 'NHaasGroteskDSPro-75Bd'
+  src: url('../fonts/3B1ADF_1_0.eot')
+  src: url('../fonts/3B1ADF_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3B1ADF_1_0.woff2') format('woff2'),url('../fonts/3B1ADF_1_0.woff') format('woff'),url('../fonts/3B1ADF_1_0.ttf') format('truetype')
+
+
+@font-face
+  font-family: 'UniversLTPro-45Light'
+  src: url('../fonts/3B1ADF_2_0.eot')
+  src: url('../fonts/3B1ADF_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3B1ADF_2_0.woff2') format('woff2'),url('../fonts/3B1ADF_2_0.woff') format('woff'),url('../fonts/3B1ADF_2_0.ttf') format('truetype')
+
+
 $background: #fff
 $color: #010101
+$black: #000
 $space-xs: 4px
 $space-sm: 8px
 $space-md: 16px
@@ -11,10 +33,27 @@ $space-lg: 64px
 
 $max-width: 800px
 
-$fxxl: 5.653rem
-$fxl: 3.998rem
-$flg: 1.999rem
-$fmd: 1.414rem
+$fxxl: 2.986rem
+$fxl: 2.074rem
+$flg: 1.44rem
+$fmd: 1.2rem
+
+@mixin link-border
+  position: relative
+
+  &:after
+    background-color: $black
+    position: absolute
+    bottom: -2px
+    content: ''
+    display: block
+    height: 1px
+    left: 0
+    width: 100%
+
+@mixin disable-link-border
+  &:after
+    content: none
 
 *
   box-sizing: border-box
@@ -32,8 +71,7 @@ body
   -webkit-font-smoothing: antialiased
   text-rendering: optimizelegibility
 
-  font-family: Univers LT Pro
-  font-weight: 300
+  font-family: UniversLTPro-45Light
   line-height: 1.45
 
   min-height: 100%
@@ -41,19 +79,24 @@ body
 h1,
 h2,
 h3
-  font-family: Neue Haas Grotesk Display Pro
-  font-weight: bold
+  font-family: 'NHaasGroteskDSPro-75Bd'
+  font-weight: normal
   font-size: $flg
 
 h1
-  font-size: $fxl
+  font-size: $fxxl
 
 address
   font-style: normal
 
 a
-  text-decoration: underline
+  +link-border
   color: $color
+  text-decoration: none
+
+.muted-link,
+a:hover
+  +disable-link-border
 
 img
   max-width: 100%
@@ -68,10 +111,9 @@ img
 
 .headline__h2
   margin: 0
-  margin-top: $space-xs
-  font-family: Neue Haas Grotesk Display Pro
-  font-weight: 400
-  font-size: $flg
+  margin-top: $space-sm
+  font-family: 'NHaasGroteskDSPro-55Rg'
+  font-size: $fxl
 
 .headline__h1,
 .headline__h2
@@ -109,6 +151,10 @@ img
   text-decoration: none
   color: $color
   font-size: $fmd
+  +disable-link-border
+
+  &:hover
+    +link-border
 
 .map
   padding: $space-mdp 0

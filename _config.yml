@@ -5,6 +5,8 @@ menu:
     title: Leistungen
   - url: '/customers.html'
     title: Referenzen
+  - url: '/certifications.html'
+    title: Förderungen
   - url: '/jobs.html'
     title: Jobs
   - url: '/contact.html'
