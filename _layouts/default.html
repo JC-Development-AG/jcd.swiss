@@ -2,15 +2,15 @@
 <html lang="de-CH">
 <head>
   <meta charset="utf8">
-  <title>{{ page.meta_title | default: page.title }} | JC Development AG</title>
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
+  <title>{{ page.meta_title | default: page.baseurl }} | JC Development AG</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
   <meta name="description" content="">
-  <script src="{{ site.url }}/assets/js/turbolinks.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/turbolinks.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <a href="{{ site.url }}" class="muted-link">
-      <img src="{{ site.url }}/assets/img/logo.svg" alt="JC Development" width="200">
+    <a href="{{ site.baseurl }}" class="muted-link">
+      <img src="{{ site.baseurl }}/assets/img/logo.svg" alt="JC Development" width="200">
     </a>
   </header>
   <div class="wrapper">
@@ -20,7 +20,7 @@
   </div>
   <menu class="menu">
     {% for item in site.menu %}
-    <a href="{{ site.url }}{{ item.url }}" class="menu__a {% if item.url == page.url %}menu__a--active{% endif %}">{{ item.title }}</a>
+    <a href="{{ site.baseurl }}{{ item.url }}" class="menu__a {% if item.url == page.url %}menu__a--active{% endif %}">{{ item.title }}</a>
     {% endfor %}
   </menu>
 </body>
