@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Building Information Modelling 2.0
-subtitle: Intelligenter Bauen.
+title: BIM heisst, dass das Bauteil weiss was es ist.
+subtitle: BIM 2.0 heisst, das Bauteil findet es selber heraus.
 ---
 
 ## Digitalisierung der Geschäftsprozesse in der Bauchbranche
@@ -22,8 +22,6 @@ Grosse Chancen von BIM bestehen für Bauherren aber vor allem auch für die Indu
 dass es für Lieferanten, Planer, Bauherren etc. wirklich nützlich wird, müssen die Informationen automatisiert hinterlegt werden. Die Bauteile verändern ihre Informationen aufgrund der Geometrie, oder sie verändern die Geometrie aufgrund der Informationen aus dem ERP.
 
 Bei diesen Bauteilen sprechen wir von einer Parametrisierten Konstruktion als Teil der Digitalisierungsstrategie.
-
-BIM heisst, das Bauteil weiss was es ist. BIM 2.0 heisst, das Bauteil findet es selber heraus.
 
 ## Software zum Aufbauen
 

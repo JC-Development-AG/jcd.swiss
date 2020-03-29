@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Geplant ist immer einfach.
-subtitle: Sie bauen mit System. Planen Sie auch mit System.
+title: Sie bauen mit System.
+subtitle: Planen Sie auch mit System.
 meta_title: BIM-Planung par excellence
 ---
 
