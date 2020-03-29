@@ -148,9 +148,13 @@ img
   padding: $space-md $space-mdp
 
 .menu__a
+  @extend %inverse-link
   text-decoration: none
   color: $color
   font-size: $fmd
+  display: block
+
+%inverse-link
   +disable-link-border
 
   &:hover
@@ -178,4 +182,32 @@ img
   row-gap: $space-lg
   grid-column-gap: $space-sm
   grid-row-gap: $space-lg
+
+.customer
+  @extend %inverse-link
+  display: block
+  margin-bottom: $space-lg
+
+
+@media (max-width: 700px)
+  .team
+    display: block
+
+  .member
+    margin-bottom: $space-lg
+
+  .headline__h1,
+  .headline__h2
+    overflow-wrap: break-word
+    word-wrap: break-word
+    -webkit-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+
+  .menu
+    overflow-y: scroll
+    -webkit-overflow-scrolling: touch
+
+  .menu__a
+     margin-right: $space-md
 

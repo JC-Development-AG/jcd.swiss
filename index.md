@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Geplant ist immer einfach.
-subtitle: Sie bauen mit System. Jetzt planen Sie auch mit System.
+subtitle: Sie bauen mit System. Planen Sie auch mit System.
 meta_title: BIM-Planung par excellence
 ---
 
-Wir heben BIM-Planung auf die nächste Stufe, verbinden CAD mit ERP und Sie
-planen in Stunden was früher Tage dauerte. Dafür erschaffen wir digitale Tools
-aller Art. Das sind zum Beispiel Allplan SmartParts, PythonParts oder native
-Plug-Ins für Allplan. Wir bauen auch eigenstädnige Tools.
+JC Development ist eine Philosophie. Wir haben es uns zur Aufgabe gemacht
+Planungsprozesse unserer Kunden zu optimieren. Wenn die ganze Welt von BIM
+spricht – wir gehen einen Schritt weiter. Mit unseren digitalen Tools planen Sie
+in Stunden was früher Tage dauerte. Wir verbinden CAD mit ERP, konstruieren
+automatisch aus einfachen Rastern und Textdateien und setzen auf Industrie 4.0.

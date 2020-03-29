@@ -6,8 +6,8 @@ meta_title: Referenzen
 ---
 
 {% for post in site.categories.customer %}
-  <a href="{{ post.url }}">
-    <img src="{{ site.baseurl }}{{ post.poster }}">
+  <a href="{{ post.url }}" class="customer">
+    <img src="{{ site.url }}{{ post.poster }}">
     <div>{{post.title}}</div>
   </a>
 {% endfor %}
