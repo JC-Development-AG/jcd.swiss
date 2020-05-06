@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JC Development optimiert BIM-Planungsprozesse. Mit digitalen Tools planen Sie was früher Tage dauert in Stunden. Wir arbeiten überwiegend mit Allplan und haben für Allplan SmartParts, Python Parts und native Plug-Ins entwickelt.">
   <title>{{ page.meta_title | default: page.title }} | JC Development</title>
   <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
   <script src="{{ site.url }}/assets/js/turbolinks.js" defer></script>
@@ -19,10 +20,10 @@
       {{ content }}
     </main>
   </div>
-  <menu class="menu" data-turbolinks-permanent>
+  <nav role="navigation" class="menu" data-turbolinks-permanent>
     {% for item in site.menu %}
     <a href="{{ site.url }}{{ item.url }}" class="menu__a {% if item.url == page.url %}menu__a--active{% endif %}">{{ item.title }}</a>
     {% endfor %}
-  </menu>
+  </nav>
 </body>
 </html>
