@@ -27,6 +27,7 @@
 
 $background: #fff
 $color: #010101
+$white: #fff
 $black: #000
 $space-xs: 4px
 $space-sm: 8px
@@ -88,6 +89,7 @@ body
   height: 100%
   object-fit: cover
   object-position: bottom center
+  opacity: 0.65
 
 h1,
 h2,
@@ -138,7 +140,7 @@ img
   flex-direction: column
   max-width: $max-width
   justify-content: center
-  min-height: 100vh
+  min-height: calc(100vh - 59px)
 
 .header
   position: absolute
@@ -149,7 +151,7 @@ img
 
 .menu
   margin: 0
-  position: fixed
+  position: sticky
   left: 0
   bottom: 0
   right: 0
@@ -206,6 +208,35 @@ img
 
 .mt
   margin-top: $space-lg
+
+.footer
+  color: $white
+  background-color: $black
+  padding: $space-lg $space-mdp
+  display: flex
+  position: relative
+
+.footer__cookie
+  position: absolute
+  bottom: $space-md
+  right: $space-md
+  color: #999
+  font-size: 0.6rem
+
+.footer__left
+  flex-basis: 25%
+
+.footer__right
+  flex: 1 1
+
+.footer__link
+  color: $white
+
+  &::after
+    background-color: $white
+
+    &:hover
+      background-color: red
 
 @media (max-width: 700px)
   .team
