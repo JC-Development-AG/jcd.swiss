@@ -11,7 +11,7 @@
 </head>
 <body>
   {% if page.background %}
-    <video class="bg-video" autoplay="autoplay" muted="muted" src="https://media.istockphoto.com/videos/big-flock-of-many-black-birds-flying-against-the-morning-sky-video-id610071972"></video>
+    <video class="bg-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" src="https://media.istockphoto.com/videos/big-flock-of-many-black-birds-flying-against-the-morning-sky-video-id610071972"></video>
   {% endif %}   
   <header class="header" data-turbolinks-permanent>
     <a href="{{ site.url }}" class="muted-link">
@@ -28,5 +28,8 @@
     <a href="{{ site.url }}{{ item.url }}" class="menu__a {% if item.url == page.url %}menu__a--active{% endif %}">{{ item.title }}</a>
     {% endfor %}
   </nav>
+  <script>
+    document.querySelector("video").playbackRate = 0.3;
+  </script>
 </body>
 </html>
