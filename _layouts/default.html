@@ -20,7 +20,7 @@
       {{ content }}
     </main>
   </div>
-  <nav role="navigation" class="menu" data-turbolinks-permanent>
+  <nav role="navigation" class="menu {% if page.background %}menu--no-bg{% endif %}" data-turbolinks-permanent>
     {% for item in site.menu %}
     <a href="{{ site.url }}{{ item.url }}" class="menu__a {% if item.url == page.url %}menu__a--active{% endif %}">{{ item.title }}</a>
     {% endfor %}

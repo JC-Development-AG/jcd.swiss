@@ -143,9 +143,7 @@ img
   padding: $space-mdp
 
 .menu
-  background-color: $background
   margin: 0
-
   position: fixed
   left: 0
   bottom: 0
@@ -153,6 +151,9 @@ img
   display: flex
   justify-content: space-between
   padding: $space-md $space-mdp
+
+  &:not(.menu--no-bg)
+    background-color: $background
 
 .menu__a
   @extend %inverse-link
