@@ -3,6 +3,7 @@ layout: post
 title: Sie bauen mit System.
 subtitle: Planen Sie auch mit System.
 meta_title: BIM-Planung par excellence
+background: true
 ---
 
 JC Development ist eine Philosophie. Wir haben es uns zur Aufgabe gemacht
