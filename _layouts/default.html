@@ -9,7 +9,10 @@
   <script src="{{ site.url }}/assets/js/turbolinks.js" defer></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbzcIXmPvUh4voaIoCbmdws2HVZROADfA" data-turbolinks-eval="false" defer></script>
 </head>
-<body class="{% if page.background %}background{% endif %}">
+<body>
+  {% if page.background %}
+    <video class="bg-video" src="https://media.istockphoto.com/videos/big-flock-of-many-black-birds-flying-against-the-morning-sky-video-id610071972"></video>
+  {% endif %}   
   <header class="header" data-turbolinks-permanent>
     <a href="{{ site.url }}" class="muted-link">
       <img src="{{ site.url }}/assets/img/logo.svg" alt="JC Development" width="200">
