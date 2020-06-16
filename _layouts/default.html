@@ -13,12 +13,24 @@
   {% if page.background %}
     <video class="bg-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" src="{{ site.url }}/assets/img/schwalbe.mp4"></video>
     <script>
-      document.querySelector("video").playbackRate = 0.4;
+      (() => {
+        const video = document.querySelector("video");
+        video.playbackRate = 0.4;
+        document.addEventListener('mousemove', (e) => {
+          window.requestAnimationFrame(() => {
+            const x = Math.sin(e.pageX / window.innerWidth * Math.PI);
+            const rotate = 45 * (1 - x);
+            const brightness = 70 + x * 30;
+            video.style.filter = `hue-rotate(${rotate}deg) brightness(${brightness}%)`;
+          });
+        });
+      })();
     </script>
+    <script src="{{ site.url }}/assets/js/object-fit-videos.min.js" defer async onload="objectFitVideos();"></script>
   {% endif %}
   <header class="header" data-turbolinks-permanent>
     <a href="{{ site.url }}" class="muted-link">
-      <img src="{{ site.url }}/assets/img/logo.svg" alt="JC Development" width="200">
+      <img src="{{ site.url }}/assets/img/logo.svg" alt="JC Development" width="230" class="logo">
     </a>
   </header>
   <div class="wrapper">
