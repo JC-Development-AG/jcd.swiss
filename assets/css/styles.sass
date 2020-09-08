@@ -2,6 +2,7 @@
 ---
 
 @import url("//hello.myfonts.net/count/3b1adf")
+@import "aos.css"
 
 
 @font-face
@@ -35,6 +36,7 @@ $space-md: 16px
 $space-mdp: 24px
 $space-lg: 64px
 
+$break: 700px
 $max-width: 800px
 
 $fxxl: 2.986rem
@@ -90,7 +92,7 @@ body
   object-fit: cover
   font-family: 'object-fit: cover;'
   object-position: bottom center
-  opacity: 0.65
+  opacity: 0.4
 
 h1,
 h2,
@@ -162,6 +164,7 @@ img
   display: flex
   justify-content: space-between
   padding: $space-md $space-mdp
+  font-family: 'NHaasGroteskDSPro-75Bd'
 
   &:not(.menu--no-bg)
     background-color: $background
@@ -247,18 +250,34 @@ object-fit
   z-index: -1000
 
 .apps
-  display: flex
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-column-gap: $flg
+  grid-row-gap: $flg
+
+  @media (max-width: $break)
+    grid-template-columns: repeat(2, 1fr)
 
 .apps__app
+  +disable-link-border
   display: block
-  flex: 1 1 33.333%
+  text-decoration: none
+
+.apps__app__inner
   position: relative
-  border-radius: 40px
+  background-color: $white
+  //border-radius: 40px
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+  transition: 0.2s all linear
+
+  &:before
+    content: ' '
+    display: block
+    width: 100%
+    padding-top: 80%
 
   &:after
-    transition: 0.2s all linear
-    border-radius: 40px
+    //border-radius: 40px
     position: absolute
     top: 0
     left: 0
@@ -269,15 +288,29 @@ object-fit
     background: rgb(255,255,255)
     background: radial-gradient(circle, rgba(255,255,255,0.19089642693014708) 0%, rgba(0,0,0,0.10126057258841037) 100%)
 
-  &:hover:after
+  &:hover
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2)
+    transform: scale(1.05)
 
 .apps__app__img
   width: 100%
-  border-radius: 40px
+  //border-radius: 40px
   display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
 
-@media (max-width: 700px)
+  &--contain
+    object-fit: contain
+    padding: $fmd
+
+.apps__app__label
+  margin-top: 0.6rem
+
+@media (max-width: $break)
   .team
     display: block
 
@@ -306,5 +339,4 @@ object-fit
     margin-bottom: $space-lg
 
   .header
-    position: absolute
-
+    position: static
